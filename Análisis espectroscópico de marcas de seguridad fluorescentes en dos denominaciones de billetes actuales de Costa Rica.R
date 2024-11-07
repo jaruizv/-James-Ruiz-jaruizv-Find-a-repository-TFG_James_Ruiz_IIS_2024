@@ -1,3 +1,9 @@
+# Autor: James Andrés Ruiz Vásquez
+# Código empleado para el desarrollo del artículo:
+# "Análisis espectroscópico de marcas de seguridad fluorescentes en dos denominaciones de billetes actuales de Costa Rica"
+# Versión: 1.0
+# Fecha: 07/11/2024
+
 #Se importan las bibliotecas necesarias
 library(tidyverse) # Conjunto de paquetes para manipulación de datos
 library(photobiology)# Manipulación de espectros
@@ -308,7 +314,7 @@ write.csv(results_df, "Results_df.csv", row.names = FALSE)
 dev.off()
 # Lambda max
 layout(matrix(1, nrow = 1))
-par(mar = c(4, 4, 1, 1), cex = 1.2) 
+par(mar = c(4, 4, 1, 1), cex = 1.2, cex.lab = 1.2, cex.axis = 1.2) 
 # Gráfico principal: Histograma
 hist(results_df$lambda_max, main = NULL, xlab = "Longitud de onda de máxima emisión / (nm)", 
      xlim = c(400, 700), ylab = "Densidad", ylim = c(-0.001, 0.025), freq = FALSE)
@@ -322,7 +328,7 @@ boxplot(results_df$lambda_max, horizontal = TRUE, axes = FALSE,
 dev.off()
 # Lambda ponderada
 layout(matrix(1, nrow = 1))
-par(mar = c(4, 4, 1, 1), cex = 1.2) 
+par(mar = c(4, 4, 1, 1), cex = 1.2, cex.lab = 1.2, cex.axis = 1.2) 
 # Gráfico principal: Histograma
 hist(results_df$lambda_ponderada, main = NULL, xlab = "Longitud de onda ponderada / (nm)", 
      xlim = c(515, 555), ylab = "Densidad", ylim = c(-0.01, 0.15), freq = FALSE, breaks = 12)
@@ -336,7 +342,7 @@ boxplot(results_df$lambda_ponderada, horizontal = TRUE, axes = FALSE,
 dev.off()
 # INT max
 layout(matrix(1, nrow = 1))
-par(mar = c(4, 4, 1, 1), cex = 1.2)
+par(mar = c(4, 4, 1, 1), cex = 1.2, cex.lab = 1.2, cex.axis = 1.2)
 # Gráfico principal: Histograma
 hist(results_df$INT_max, main = NULL, xlab = "Intensidad de emisión máxima / (CPS)",
      xlim = c(0,70000), ylab = "Densidad", ylim = c(-4e-06, 5e-05), freq= FALSE)
@@ -350,7 +356,7 @@ boxplot(results_df$INT_max, horizontal = TRUE, axes = FALSE,
 dev.off()
 # INT ponderada
 layout(matrix(1, nrow = 1))
-par(mar = c(4, 4, 1, 1), cex = 1.2) 
+par(mar = c(4, 4, 1, 1), cex = 1.2, cex.lab = 1.2, cex.axis = 1.2) 
 # Gráfico principal: Histograma
 hist(results_df$INT_ponderada, main = NULL, xlab = "Intensidad de emisión ponderada / (CPS)",
      xlim = c(0,20000), ylab = "Densidad", ylim = c(-0.000008, 0.00012), freq= FALSE)
@@ -758,7 +764,7 @@ write.csv(results_df, "Results_df.csv", row.names = FALSE)
 dev.off()
 # Lambda max
 layout(matrix(1, nrow = 1))
-par(mar = c(4, 4, 1, 1), cex = 1.2) 
+par(mar = c(4, 4, 1, 1), cex = 1.2, cex.lab = 1.2, cex.axis = 1.2) 
 # Gráfico principal: Histograma
 hist(results_df$lambda_max, main = NULL, xlab = "Longitud de onda de máxima emisión / (nm)", 
      xlim = c(450, 675), ylab = "Densidad", ylim = c(-0.0023, 0.05), freq = FALSE)
@@ -772,7 +778,7 @@ boxplot(results_df$lambda_max, horizontal = TRUE, axes = FALSE,
 dev.off()
 # Lambda ponderada
 layout(matrix(1, nrow = 1))
-par(mar = c(4, 4, 1, 1), cex = 1.2) 
+par(mar = c(4, 4, 1, 1), cex = 1.2, cex.lab = 1.2, cex.axis = 1.2) 
 # Gráfico principal: Histograma
 hist(results_df$lambda_ponderada, main = NULL, xlab = "Longitud de onda ponderada / (nm)", 
      xlim = c(530, 560), ylab = "Densidad", ylim = c(-0.013, 0.2), freq = FALSE, breaks = 12)
@@ -786,7 +792,7 @@ boxplot(results_df$lambda_ponderada, horizontal = TRUE, axes = FALSE,
 dev.off()
 # INT max
 layout(matrix(1, nrow = 1))
-par(mar = c(4, 4, 1, 1), cex = 1.2) 
+par(mar = c(4, 4, 1, 1), cex = 1.2, cex.lab = 1.2, cex.axis = 1.2) 
 # Gráfico principal: Histograma
 hist(results_df$INT_max, main = NULL, xlab = "Intensidad de emisión máxima / (CPS)",
      xlim = c(0,35000), ylab = "Densidad", ylim = c(-7e-06, 0.0001), freq= FALSE)
@@ -800,7 +806,7 @@ boxplot(results_df$INT_max, horizontal = TRUE, axes = FALSE,
 dev.off()
 # INT ponderada
 layout(matrix(1, nrow = 1))
-par(mar = c(4, 4, 1, 1), cex = 1.2) 
+par(mar = c(4, 4, 1, 1), cex = 1.2, cex.lab = 1.2, cex.axis = 1.2) 
 # Gráfico principal: Histograma
 hist(results_df$INT_ponderada, main = NULL, xlab = "Intensidad de emisión ponderada / (CPS)",
      xlim = c(0,12000), ylab = "Densidad", ylim = c(-0.00002, 0.0003), freq= FALSE)
